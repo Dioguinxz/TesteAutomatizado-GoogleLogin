@@ -1,9 +1,6 @@
 package teste;
 
-import Pages.CadastroEmail;
-import Pages.CadastroIdade;
-import Pages.CadastroNome;
-import Pages.CadastroSenha;
+import Pages.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +11,8 @@ public class CadastroNomeTest extends TestCase {
     static CadastroNome cadastroNome;
     static CadastroIdade cadastroIdade;
     static CadastroEmail cadastroEmail;
-    static CadastroSenha criarSenha;
+    static CadastroSenha cadastroSenha;
+    static CadastroNumero cadastroNumero;
 
 //    @Before
 //    public void setUp() throws Exception {
@@ -23,7 +21,7 @@ public class CadastroNomeTest extends TestCase {
 
     @Test
     public void test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Programação\\TestesAutomatizados\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com/SignUp?hl=pt");
         cadastroNome = new CadastroNome(driver);
@@ -35,9 +33,11 @@ public class CadastroNomeTest extends TestCase {
         cadastroEmail = new CadastroEmail(driver);
         cadastroEmail.preecherDadosEmail();
 
-        criarSenha = new CadastroSenha(driver);
-        criarSenha.preencherPassword();
+        cadastroSenha = new CadastroSenha(driver);
+        cadastroSenha.preencherPassword();
 
+        cadastroNumero = new CadastroNumero(driver);
+        cadastroNumero.preencherNumero();
 
 
     }

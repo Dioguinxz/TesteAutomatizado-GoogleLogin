@@ -25,9 +25,9 @@ public class CadastroSenha {
         WebElement botaoAvancar = driver.findElement(By.xpath("*//span[contains(text(), 'Avançar')]"));
         botaoAvancar.click();
 
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.visibilityOfElementLocated
-//                (By.xpath("//span[contains(text(), 'Confirme que você não é um robô')]")));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//span[contains(text(), 'Confirme que você não é um robô')]")));
 
 
     }
