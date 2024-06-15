@@ -23,7 +23,6 @@ public class CadastroNumero {
         WebElement botaoProxima = driver.findElement(By.xpath("*//span[contains(text(), 'Próxima')]"));
         botaoProxima.click();
 
-
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.xpath("//span[contains(text(), 'Digite o código')]")));
