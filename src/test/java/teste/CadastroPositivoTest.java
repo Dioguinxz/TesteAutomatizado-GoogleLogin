@@ -1,18 +1,20 @@
 package teste;
 
+import PageTestesFalhos.CadastroNomeFalho;
 import Pages.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CadastroNomeTest extends TestCase {
+public class CadastroPositivoTest extends TestCase {
     static WebDriver driver;
     static CadastroNome cadastroNome;
     static CadastroIdade cadastroIdade;
     static CadastroEmail cadastroEmail;
     static CadastroSenha cadastroSenha;
     static CadastroNumero cadastroNumero;
+    static CadastroNomeFalho cadastroNomeFalho;
 
 //    @Before
 //    public void setUp() throws Exception {
@@ -38,6 +40,7 @@ public class CadastroNomeTest extends TestCase {
 
         cadastroNumero = new CadastroNumero(driver);
         cadastroNumero.preencherNumero();
+
 
 
     }
