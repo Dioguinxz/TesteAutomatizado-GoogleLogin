@@ -27,6 +27,7 @@ public class CadastroEmailFalhoTest {
 
         cadastroNome.preencherCampo();
         cadastroIdade.preencherDados();
+        cadastroEmailFalho.preencherEmailFalho();
         assertEquals(cadastroEmailFalho.validarMensagemEmail(), "Os nomes de usuário com no mínimo oito caracteres devem incluir no mínimo um caractere alfabético (a - z)");
     }
 
