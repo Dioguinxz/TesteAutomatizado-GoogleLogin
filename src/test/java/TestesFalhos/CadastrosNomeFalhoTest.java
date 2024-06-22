@@ -6,20 +6,23 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CadastrosFalhosTest extends TestCase {
+public class CadastrosNomeFalhoTest extends TestCase {
 
     static WebDriver driver;
     static CadastroNomeFalho cadastroNomeFalho;
 
+
     @Test
-    public void test(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Programação\\TestesAutomatizados\\chromedriver-win64\\chromedriver.exe");
+    public void test() {
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com/SignUp?hl=pt");
-
         cadastroNomeFalho = new CadastroNomeFalho(driver);
-        cadastroNomeFalho.preencherNomeFalho();
 
+
+        cadastroNomeFalho.preencherNomeFalho();
+        assertEquals(cadastroNomeFalho.validarMensagemNome(),
+                "Tem certeza de que inseriu seu nome corretamente?");
     }
 
 }

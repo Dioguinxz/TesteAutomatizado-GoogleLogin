@@ -16,14 +16,11 @@ public class CadastroPositivoTest extends TestCase {
     static CadastroNumero cadastroNumero;
     static CadastroNomeFalho cadastroNomeFalho;
 
-//    @Before
-//    public void setUp() throws Exception {
-//
-//    }
 
     @Test
     public void test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Programação\\TestesAutomatizados\\chromedriver-win64\\chromedriver.exe");
+
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com/SignUp?hl=pt");
         cadastroNome = new CadastroNome(driver);
@@ -40,7 +37,6 @@ public class CadastroPositivoTest extends TestCase {
 
         cadastroNumero = new CadastroNumero(driver);
         cadastroNumero.preencherNumero();
-
 
 
     }
