@@ -5,6 +5,7 @@ import Pages.CadastroEmail;
 import Pages.CadastroIdade;
 import Pages.CadastroNome;
 import Pages.CadastroSenha;
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,5 +41,7 @@ public class CadastroNumeroFalhoTest {
         cadastroNumeroFalho.preencherNumeroFalho();
         assertEquals(cadastroNumeroFalho.validarMensagemTelefone(), "Este formato de número de telefone não é válido. Verifique o país e o número.");
     }
+
+
 
 }

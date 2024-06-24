@@ -3,6 +3,7 @@ package TestesFalhos;
 import PageTestesFalhos.CadastroEmailFalho;
 import Pages.CadastroIdade;
 import Pages.CadastroNome;
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

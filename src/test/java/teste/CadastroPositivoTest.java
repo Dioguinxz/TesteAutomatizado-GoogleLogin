@@ -3,6 +3,7 @@ package teste;
 import PageTestesFalhos.CadastroNomeFalho;
 import Pages.*;
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,6 +39,13 @@ public class CadastroPositivoTest extends TestCase {
         cadastroNumero.preencherNumero();
 
 
+    }
+
+    @After
+    public void encerrar() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
 }

@@ -5,6 +5,7 @@ import PageTestesFalhos.CadastroSenhaFalha;
 import Pages.CadastroEmail;
 import Pages.CadastroIdade;
 import Pages.CadastroNome;
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,7 +35,7 @@ public class CadastroSenhaFalhaTest {
         cadastroEmail.preecherDadosEmail();
         cadastroSenhaFalha.preencherSenhaFalha();
         assertEquals(cadastroSenhaFalha.validarMensagemSenha(), "As senhas não são iguais. Tente novamente.");
-
-
     }
+
+
 }

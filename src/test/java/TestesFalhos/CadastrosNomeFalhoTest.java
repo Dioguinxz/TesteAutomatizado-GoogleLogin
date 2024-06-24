@@ -2,6 +2,7 @@ package TestesFalhos;
 
 import PageTestesFalhos.CadastroNomeFalho;
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,10 +20,10 @@ public class CadastrosNomeFalhoTest extends TestCase {
         driver.get("https://accounts.google.com/SignUp?hl=pt");
         cadastroNomeFalho = new CadastroNomeFalho(driver);
 
-
         cadastroNomeFalho.preencherNomeFalho();
         assertEquals(cadastroNomeFalho.validarMensagemNome(),
                 "Tem certeza de que inseriu seu nome corretamente?");
     }
+
 
 }

@@ -2,6 +2,7 @@ package TestesFalhos;
 
 import PageTestesFalhos.CadastroIdadeFalho;
 import Pages.CadastroNome;
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,7 +26,6 @@ public class CadastroIdadeFalhoTest {
         cadastroNome.preencherCampo();
         cadastroIdadeFalho.preencherIdadeFalho();
         assertEquals(cadastroIdadeFalho.validarMensagemIdade(), "Insira uma data válida");
-
-
     }
+
 }
