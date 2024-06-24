@@ -41,11 +41,5 @@ public class CadastroPositivoTest extends TestCase {
 
     }
 
-    @After
-    public void encerrar() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
 
 }
