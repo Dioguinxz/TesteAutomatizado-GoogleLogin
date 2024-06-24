@@ -1,6 +1,8 @@
 package TestesFalhos;
 
 import PageTestesFalhos.CadastroEmailFalho;
+import PageTestesFalhos.CadastroSenhaFalha;
+import Pages.CadastroEmail;
 import Pages.CadastroIdade;
 import Pages.CadastroNome;
 import org.junit.Test;
@@ -9,26 +11,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class CadastroEmailFalhoTest {
+public class CadastroSenhaFalhaTest {
     static WebDriver driver;
     static CadastroNome cadastroNome;
     static CadastroIdade cadastroIdade;
-    static CadastroEmailFalho cadastroEmailFalho;
+    static CadastroEmail cadastroEmail;
+    static CadastroSenhaFalha cadastroSenhaFalha;
 
     @Test
-    public void test(){
+    public void test() {
         System.setProperty("webdriver.chrome.driver", "C:\\Programação\\TestesAutomatizados\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com/SignUp?hl=pt");
 
         cadastroNome = new CadastroNome(driver);
         cadastroIdade = new CadastroIdade(driver);
-        cadastroEmailFalho = new CadastroEmailFalho(driver);
+        cadastroEmail = new CadastroEmail(driver);
+        cadastroSenhaFalha = new CadastroSenhaFalha(driver);
 
         cadastroNome.preencherCampo();
         cadastroIdade.preencherDados();
-        cadastroEmailFalho.preencherEmailFalho();
-        assertEquals(cadastroEmailFalho.validarMensagemEmail(), "Os nomes de usuário com no mínimo oito caracteres devem incluir no mínimo um caractere alfabético (a - z)");
-    }
+        cadastroEmail.preecherDadosEmail();
+        cadastroSenhaFalha.preencherSenhaFalha();
+        assertEquals(cadastroSenhaFalha.validarMensagemSenha(), "As senhas não são iguais. Tente novamente.");
 
+
+    }
 }

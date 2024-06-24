@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class CadastroIdade {
+public class    CadastroIdade {
 
     static WebDriver driver;
 
@@ -29,7 +29,7 @@ public class CadastroIdade {
         WebElement gender = driver.findElement(By.id("gender"));
         gender.sendKeys("Homem");
 
-        WebElement botaoAvancar = driver.findElement(By.xpath("*//span[contains(text(), 'Avançar')]"));
+            WebElement botaoAvancar = driver.findElement(By.xpath("*//span[contains(text(), 'Avançar')]"));
         botaoAvancar.click();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

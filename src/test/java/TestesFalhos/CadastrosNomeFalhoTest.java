@@ -14,7 +14,7 @@ public class CadastrosNomeFalhoTest extends TestCase {
 
     @Test
     public void test() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Programação\\TestesAutomatizados\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com/SignUp?hl=pt");
         cadastroNomeFalho = new CadastroNomeFalho(driver);
