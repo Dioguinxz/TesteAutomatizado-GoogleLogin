@@ -14,13 +14,12 @@ public class CadastroPositivoTest extends TestCase {
     static CadastroEmail cadastroEmail;
     static CadastroSenha cadastroSenha;
     static CadastroNumero cadastroNumero;
-    static CadastroNomeFalho cadastroNomeFalho;
 
 
     @Test
     public void test() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Programação\\TestesAutomatizados\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com/SignUp?hl=pt");
         cadastroNome = new CadastroNome(driver);
