@@ -8,29 +8,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class CadastroSenhaFalha {
+public class CadastroSenhaCaractereFalho {
     static WebDriver driver;
 
-    public CadastroSenhaFalha(WebDriver driver) {
+    public CadastroSenhaCaractereFalho(WebDriver driver) {
         this.driver = driver;
     }
 
     public void preencherSenhaFalha(){
         WebElement password = driver.findElement(By.name("Passwd"));
-        password.sendKeys("pedro@21$%");
+        password.sendKeys("abc");
 
         WebElement confirmPassword = driver.findElement(By.name("PasswdAgain"));
-        confirmPassword.sendKeys("dfddfdfdw&&#@");
+        confirmPassword.sendKeys("abc");
 
         WebElement botaoAvancar = driver.findElement(By.xpath("*//span[contains(text(), 'Avançar')]"));
         botaoAvancar.click();
     }
-    
+
     public String validarMensagemSenha(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[contains(text(), 'As senhas não são iguais. Tente novamente.')]")));
+                By.xpath("//span[contains(text(), 'Use 8 caracteres ou mais para sua senha')]")));
 
-        return driver.findElement(By.xpath("//span[contains(text(), 'As senhas não são iguais. Tente novamente.')]")).getText();
+        return driver.findElement(By.xpath
+                ("//span[contains(text(), 'Use 8 caracteres ou mais para sua senha')]")).getText();
     }
+
 }

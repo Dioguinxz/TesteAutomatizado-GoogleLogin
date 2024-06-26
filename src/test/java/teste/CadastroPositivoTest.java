@@ -25,7 +25,6 @@ public class CadastroPositivoTest extends TestCase {
         driver.get("https://accounts.google.com/SignUp?hl=pt");
         cadastroNome = new CadastroNome(driver);
         cadastroNome.preencherCampo();
-
         cadastroIdade = new CadastroIdade(driver);
         cadastroIdade.preencherDados();
 

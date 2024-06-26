@@ -25,13 +25,13 @@ public class CadastroNumeroFalho {
     }
 
     public String validarMensagemTelefone() {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(
-//                By.xpath
-//                        ("//span[contains(text(), 'Este formato de número de telefone não é válido. Verifique o país e o número.')]")));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath
+                        ("//div[contains(text(), 'Este formato de número de telefone não é válido. Verifique o país e o número.')]")));
 
         return driver.findElement(By.xpath
-                ("//span[contains(text(), 'Este formato de número de telefone não é válido. Verifique o país e o número.')]")).getText();
+                ("//div[contains(text(), 'Este formato de número de telefone não é válido. Verifique o país e o número.')]")).getText();
 
     }
 
