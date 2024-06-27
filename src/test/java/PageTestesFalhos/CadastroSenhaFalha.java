@@ -15,7 +15,7 @@ public class CadastroSenhaFalha {
         this.driver = driver;
     }
 
-    public void preencherSenhaFalha(){
+    public void preencherSenhaFalha() {
         WebElement password = driver.findElement(By.name("Passwd"));
         password.sendKeys("pedro@21$%");
 
@@ -24,13 +24,15 @@ public class CadastroSenhaFalha {
 
         WebElement botaoAvancar = driver.findElement(By.xpath("*//span[contains(text(), 'Avançar')]"));
         botaoAvancar.click();
+
     }
-    
-    public String validarMensagemSenha(){
+
+    public String validarMensagemSenha() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//span[contains(text(), 'As senhas não são iguais. Tente novamente.')]")));
 
-        return driver.findElement(By.xpath("//span[contains(text(), 'As senhas não são iguais. Tente novamente.')]")).getText();
+        return driver.findElement(By.xpath
+                ("//span[contains(text(), 'As senhas não são iguais. Tente novamente.')]")).getText();
     }
 }
