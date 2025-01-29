@@ -17,10 +17,10 @@ public class CadastroSenha {
 
     public void preencherPassword() {
         WebElement password = driver.findElement(By.name("Passwd"));
-        password.sendKeys("jfq3c7V11#");
+        password.sendKeys("teste123");
 
         WebElement confirmPassword = driver.findElement(By.name("PasswdAgain"));
-        confirmPassword.sendKeys("jfq3c7V11#");
+        confirmPassword.sendKeys("teste123");
 
         WebElement botaoAvancar = driver.findElement(By.xpath("*//span[contains(text(), 'Avançar')]"));
         botaoAvancar.click();
